@@ -11,11 +11,11 @@ from bs4 import BeautifulSoup
 from HTMLStripper import MLStripper
 #------------------------------------------Keys---------------------------------------------------------#
 #Register your app on dev.twitter.com to get the API Keys and Token, uses OAuth 2
-API_KEY = "pKxKEHl6hyFwQBrh0GTZV8BBn"
-API_SECRET  ="sQ4xh1gZ8elA4Yq4sz8EtTlOZfT14FG3HH8RFMG8vHH9LI1XBU"
+API_KEY = "ADD YOUR KEY HERE"
+API_SECRET  ="ADD API SECRET KEY HERE"
 
-TOKEN = "2447417772-Ul4fvWF7KZ3HM5LLKmM6yv81ZXJLsQfPUcpSU7A"
-TOKEN_SECRET = "I3unuCz3rlw4Jcf9f93r25SOkVXnvHf6ZggPXJVavrbCA"
+TOKEN = "ADD YOUR TOKEN HERE"
+TOKEN_SECRET = "ADD YOUR TOKEN SECRET HERE"
 
 #------------------------------------------Instances Of Tweepy Class---------------------------#
 
