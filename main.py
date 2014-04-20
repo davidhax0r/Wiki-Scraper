@@ -1,9 +1,20 @@
-# Developed by: Nauman Ahmad
-# Twitter: twitter.com/itsnauman
-# Email: nauman-ahmad@outlook.com
-# Feel free to send pull requests for fixing the code
-# Run it in the terminal on even Raspberry Pi!
-# python main.py
+"""
+Copyright 2014 Nauman Ahmad
+
+This file is part of the Wiki Scraper library.
+
+Wiki Scraper is free software: you can redistribute it and/or
+modify it under the terms of the GNU General Public License as published by the
+Free Software Foundation, either version 3 of the License, or (at your option) any
+later version.
+
+Wiki Scraper is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with Wiki Scraper.
+If not, see http://www.gnu.org/licenses/.
+"""
 
 #------------------------------------------Imports-------------------------------------------------------#
 import requests,time,tweepy
@@ -28,16 +39,23 @@ twitter = tweepy.API(auth)
 
 #------------------------------------------HTML Stripper Function--------------------------------#
 
-#Function to remove all HTML tags
+
 def strip_tags(html):
+    """
+    Remove tags from HTML
+    """
     s = MLStripper()
     s.feed(html)
     return s.get_data()
 
 #-------------------------------------------Main function---------------------------------------------#
 def tweekibot():
+    """
+    Module to get facts from http://en.wikipedia.org/wiki/Wikipedia:On_this_day/Today
+    Seperate those less than 140 characters and then tweet them
+    It waits for some time and then checks the page for more information
+    """
 
-    #Fetches the content from the Wikipedia page
     wiki = requests.get('http://en.wikipedia.org/wiki/Wikipedia:On_this_day/Today')
     #fetches the HTML of the link
     wiki_page = wiki.text
