@@ -76,7 +76,7 @@ def tweekibot():
             #Calls the strip_tags() function to clean the content from the tags
             tweet = strip_tags(str(line))
             tweet_list[counter] = tweet
-        counter = counter + 1
+        counter += 1
 
 #Checks if the length of the info is less than 140 characters
     clean_list = []
