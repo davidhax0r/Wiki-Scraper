@@ -2,18 +2,6 @@
 Copyright 2014 Nauman Ahmad
 
 This file is part of the Wiki Scraper library.
-
-Wiki Scraper is free software: you can redistribute it and/or
-modify it under the terms of the GNU General Public License as published by the
-Free Software Foundation, either version 3 of the License, or (at your option) any
-later version.
-
-Wiki Scraper is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License along with Wiki Scraper.
-If not, see http://www.gnu.org/licenses/.
 """
 
 #------------------------------------------Imports-------------------------------------------------------#
@@ -67,8 +55,7 @@ def tweekibot():
     #creates a list of length 5 for storing the fetched info from Wikipedia
     tweet_list = ["" ,"" ,"" ,"" ,""]
 
-    counter = 0
-    for line in list_item:
+    for counter,line in enumerate(list_item):
         #Makes sure to only get the first 5 <li> tag items
         if counter == 5:
             break
@@ -76,7 +63,6 @@ def tweekibot():
             #Calls the strip_tags() function to clean the content from the tags
             tweet = strip_tags(str(line))
             tweet_list[counter] = tweet
-        counter += 1
 
 #Checks if the length of the info is less than 140 characters
     clean_list = []
